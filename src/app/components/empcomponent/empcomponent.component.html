@@ -1,0 +1,17 @@
+<p>empcomponent works!</p>
+<table class="table">
+    <thead >
+        <tr class="table-dark">
+            <th>Id</th><th>Name</th><th>post</th><th>salary</th><th>address</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let e of emp">
+            <td>{{e.id}}</td>
+            <td>{{e.name}}</td>
+            <td>{{e.post}}</td>
+            <td>{{e.salary}}</td>
+            <td>{{e.address}}</td>
+        </tr>
+    </tbody>
+</table>

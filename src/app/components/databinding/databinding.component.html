@@ -1,0 +1,11 @@
+<p>databinding works!</p>
+<!-- use of interpolition -->
+<h2>{{myName}}</h2>
+<img [src]="imgpath" [alt]=" imgname">
+<button type="button" (click)="greeting()">click on me</button>
+
+<!-- USE OF NGMODEL -->
+
+<form action="">
+    <input type="text" name="txt1" [(ngModel)]="mydata"> {{mydata}}
+</form>

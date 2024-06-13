@@ -1,0 +1,73 @@
+*angular 
+	-it is application and developement platform for creating efficient and sofisticated single page application
+    angular works on component and modules
+
+*component
+        - it is partial part of angular app
+        -it can be any part of application which we can resuse multiple time
+
+node_module:
+        -all libarary or dependancy will install in this folder
+
+package.json : it will kepp enrty of  insatall all library or package
+package-lock.json: it will hold detail information of insatlled package
+readme.md : it will work like guide manual 
+gitignore :it use to store file and folder to ignore while push data on github
+
+*app
+    -in angular app is root component
+
+*how to create component componentName
+    ng generate component componentName
+    ng g c componentName
+
+    ng g c components/databinding
+    ng g c components/directive
+
+*how to dispaly individual component view or  output
+    -copy component selector name from its file and write selector name tag 
+
+*databinding
+    accessing data from one file to another in same component
+        1.interpolation{()}; ts=>html
+        2. property Binding[]; ts => html(here we set attribute value)
+        3.event Binding (); html => ts(here we call event)
+        4.two way data binding[()]; ts <=> html
+         -to perform two way databinding
+
+task: create a componentwith name toggleimg in task folder in which you have to toggle image on single click
+how to create component:   ng g c components/componentName
+
+directives:
+    it is use to perform dom manipulation(change dom layout) and change appearance and behaviour of dom element
+        1.stuctural Directives :it is use to change dom element layout
+                                -it is denoted by * symbol
+                                -*ngif: it will display dom element when it get true value otherwise not
+                                -*ngFor: it is use iterate or repeate dom element
+                                -*ngSwitchCase: it is use to display dom element on choice
+
+        2.attribute Directives: it is use to change appearance and behaviour of dom element
+                                -ngStyle: it is use to apply css property conditionally
+                                -ngclas: it is use to apply css classes conditionally
+        3.cutome directives: developer can write logic to create custome directive
+                                - to create a custome directive we have a command.
+                                -ng generate directive directiveNmae
+
+*pipe -in angular is use  to transform property without changing its original value
+        - to use pipe we use | symbol
+        - there are three types of pipes
+            1.inbuilt pipe - pipe provided by angular
+            2.custome pipe : pipe developed by developer for use in projects
+            //how to create custome pipe
+            ng generate pipe pipeName
+            3.third party pipe : pipe developed by third party pipe
+
+*how to use bootstrap in angular
+step1: install bootstrap => npm i bootstrap
+step2:go to angular.json and import bootstrap file path in style section
+        node_module
+step3: teriminate the angular project and restart it
+
+
+
+                        

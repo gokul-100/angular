@@ -1,0 +1,29 @@
+<p>directive works!</p>
+<h2 *ngIf="isCond1"> use of ngif directive when the true statement</h2>
+<h2 *ngIf="isCond2"> use of ngif directive when the false statement</h2>
+
+<!-- <div *ngIf="isCond2 then truePart else falsepart"></div>
+
+<ng-tempalate #truePart>
+    <h2> I like samosa</h2>
+</ng-tempalate>
+<ng-tempalate #falsepart>
+    <h2> I like dosa</h2>
+</ng-tempalate> -->
+
+<ul>
+    <li *ngFor="let bike of bikes"> {{bike}} </li>
+</ul>
+
+<!-- use of switch case -->
+ <!-- <div [ngSwitch]="mybike">
+        <div *ngSwitchCase="'herohonda'">you are selected herohonda</div>
+        <div *ngSwitchCase="'r15'">you are selected herohonda</div>
+        <div *ngSwitchCase="'royal enfield'">you are selected royal enfield</div>
+        <div *ngSwitchCase="'bmw'">you are selected bmw</div>
+        <div *ngSwitchCase="'jawa'">you are selected jawa</div>
+ </div> -->
+ <div *ngFor="let bike of bikes">
+    <div *ngSwitchCase="mybike">you are selected {{mybike}}</div>
+
+ </div>
