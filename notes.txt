@@ -1,0 +1,152 @@
+*angular 
+	-it is application and developement platform for creating efficient and sofisticated single page application
+    angular works on component and modules
+
+*component
+        - it is partial part of angular app
+        -it can be any part of application which we can resuse multiple time
+
+node_module:
+        -all libarary or dependancy will install in this folder
+
+package.json : it will kepp enrty of  insatall all library or package
+package-lock.json: it will hold detail information of insatlled package
+readme.md : it will work like guide manual 
+gitignore :it use to store file and folder to ignore while push data on github
+
+*app
+    -in angular app is root component
+
+*how to create component componentName
+    ng generate component componentName
+    ng g c componentName
+
+    ng g c components/databinding
+    ng g c components/directive
+
+*how to dispaly individual component view or  output
+    -copy component selector name from its file and write selector name tag 
+
+*databinding
+    accessing data from one file to another in same component
+        1.interpolation{()}; ts=>html
+        2. property Binding[]; ts => html(here we set attribute value)
+        3.event Binding (); html => ts(here we call event)
+        4.two way data binding[()]; ts <=> html
+         -to perform two way databinding
+
+task: create a componentwith name toggleimg in task folder in which you have to toggle image on single click
+how to create component:   ng g c components/componentName
+
+directives:
+    it is use to perform dom manipulation(change dom layout) and change appearance and behaviour of dom element
+        1.stuctural Directives :it is use to change dom element layout
+                                -it is denoted by * symbol
+                                -*ngif: it will display dom element when it get true value otherwise not
+                                -*ngFor: it is use iterate or repeate dom element
+                                -*ngSwitchCase: it is use to display dom element on choice
+
+        2.attribute Directives: it is use to change appearance and behaviour of dom element
+                                -ngStyle: it is use to apply css property conditionally
+                                -ngclas: it is use to apply css classes conditionally
+        3.cutome directives: developer can write logic to create custome directive
+                                - to create a custome directive we have a command.
+                                -ng generate directive directiveNmae
+
+*pipe -in angular is use  to transform property without changing its original value
+        - to use pipe we use | symbol
+        - there are three types of pipes
+            1.inbuilt pipe - pipe provided by angular
+            2.custome pipe : pipe developed by developer for use in projects
+            //how to create custome pipe
+            ng generate pipe pipeName
+            3.third party pipe : pipe developed by third party pipe
+
+*how to use bootstrap in angular
+step1: install bootstrap => npm i bootstrap
+step2:go to angular.json and import bootstrap file path in style section
+        node_module
+step3: teriminate the angular project and restart it
+
+note start angular
+            1.open angular projects
+            2.open command
+            3.open in vs code
+            4.npx ng s -o 
+
+=========================================================================================================================
+14/6/24
+
+*routing: navigation of component
+            -dispaly component output or view by writting its path in browser url.
+            -routing will display component output under <router-outlet> <router-outlet>
+            -routing is array object containing property with value 
+            -in angular root routing module name is app-routing-module.ts
+
+types of routing
+    1.naming routing: we write component routing path in browser url to display component output
+    2.default routing:display component output by default means ,keep its path value blanck in routing 
+                        try to keep default routing first n order,
+    3.redirect routing : display component output by writting different  path name
+    parameterize routing :passing parameter with path name to dispaly component output
+    child routing: define one routijg inside another routing 
+                    - for this in parent routing we have to use childern property .
+                    -in parent routing component html file 
+    4.wildcard routing : display component output ,when user write wrong path in browser url
+                        -in this we write * as value in routing path .
+                        wildcard routing must last routing ,router define below to it never work  
+
+*how to navigate one component to another component br click on button
+how to create layout 
+
+
+form validation in angular
+*in angular there are two ways to perform form validation.
+        1. By using Utdf(User template Driven form):
+            -when we have to perform simple and small form validation in that case we use utdf.
+            -in utdf validation code will in html file
+            - in this we use ngModel model directory.
+        2.By Using RTF (Reactive template form) :
+            -in rtf validation perform in its file.
+            -to rtf validation first we have to perform form validation in that case we use rtf 
+            -rtf validation we use two classes
+                1.form group:it will hold call formcontrol date in it as well as it tract status of form 
+                2.formControl: it will track status and validation of individual input control
+
+                States	           Class if true	          Class if false
+The control has been visited.	   ng-touched	             ng-untouched
+The control's value has changed.	ng-dirty	              ng-pristine
+The control's value is valid.	    ng-valid	              ng-invalid
+
+step: import REactive forms module in root module(app.module.ts) from formsModule
+step2:import formGroup and formcontrol class in rtf component
+
+*service ; inangular service is special class with extra power
+            -we can share data with multiple component
+            -we can implement bussiness logic in it
+            -we can perform external communication (fetch data from server).
+
+To create service=> npx ng service serviceName
+
+how to access service data into any commponent.
+        -to accessdata from service to component constructor we have to create insatnce of service class  then we can access data into component.
+
+        -creating service class instance in component constructor is called dependanccy is called
+
+*how to install create REST fake app
+        dummy server : json -server
+        database: json database
+
+        to install json server:
+           npm i -g json -server
+        database :json database
+
+        *how to upload db.json file on json-server
+        cd src /app/shared/databases (press enter)
+        json -server --watch -p 8888 db.json (press enter)
+
+        *to make request from service to server we have to create instance of httpclient class in service. but httpClient is not part of core angular.it is part of httpClientModule. for this first we have to import httpClientModule in our root module
+
+        *to make request from service we have to create instance of Httpclient class in service constructor
+
+                        
